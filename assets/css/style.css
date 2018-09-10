@@ -1,1 +1,9 @@
-{\rtf1}
+button{
+    margin: 10px;
+    background: turquoise;
+   
+}
+#movie-form{
+    float: right;
+    margin: 10px;
+}
