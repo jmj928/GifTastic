@@ -43,7 +43,7 @@ $(document).ready(function () {
               var p = $("<p>").text("Rating: " + rating);
   
               var cartoonImage = $("<img>");
-              cartoonImage.attr("src", results[i].images.fixed_height.url);
+              cartoonImage.attr("src", results[i].images.fixed_height_still.url);
             
               gifDiv.prepend(cartoonImage);
               gifDiv.prepend(p);
