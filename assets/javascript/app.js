@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var cartoons = ["family guy","the simpsons","teen titans"];
+    var topics = ["family guy","the simpsons","teen titans"];
 
 
     generateButtons();
@@ -10,10 +10,10 @@ $(document).ready(function () {
 
         $("#buttons").empty();
 
-        for(var i = 0; i < cartoons.length; i++){
+        for(var i = 0; i < topics.length; i++){
             var newButton = $("<button>");
-            newButton.attr("data-name",cartoons[i]);
-            newButton.text(cartoons[i]);
+            newButton.attr("data-name",topics[i]);
+            newButton.text(topics[i]);
             $("#buttons").append(newButton);
        }          
     }
@@ -45,8 +45,9 @@ $(document).ready(function () {
               var cartoonImage = $("<img>");
               cartoonImage.attr("src", results[i].images.fixed_height_still.url);
             
-              gifDiv.prepend(cartoonImage);
               gifDiv.prepend(p);
+              gifDiv.prepend(cartoonImage);
+              
               
   
               $("#gifs-appear-here").prepend(gifDiv);
@@ -60,7 +61,7 @@ $(document).ready(function () {
     
             var addedCartoon = $("#cartoon-input").val().trim();  
 
-            cartoons.push(addedCartoon);
+            topics.push(addedCartoon);
             $("#cartoon-input").val('');
     
             generateButtons();
